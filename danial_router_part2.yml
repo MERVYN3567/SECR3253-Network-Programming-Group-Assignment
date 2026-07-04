@@ -1,6 +1,6 @@
 ---
 - name: DANIAL - CONFIGURE CSR1000V PART 2
-  hosts: routers
+  hosts: CSR1kv
   gather_facts: false
   connection: network_cli
   
