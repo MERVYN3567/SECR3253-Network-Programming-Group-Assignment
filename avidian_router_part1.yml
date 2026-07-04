@@ -10,7 +10,7 @@
       ios_config:
         parents: "interface GigabitEthernet1"
         lines:
-          - ip address 192.168.56.105 255.255.255.0
+          - ip address 192.168.56.101 255.255.255.0
           - no shutdown
 
     - name: CONFIGURE USER ACCOUNT
@@ -21,4 +21,4 @@
     - name: CONFIGURE BANNER MESSAGE
       ios_config:
         lines:
-          - banner motd ^C UNAUTHORIZED ACCESS PROHIBITED - ROTI KANAI ^C
+          - banner motd @ UNAUTHORIZED ACCESS PROHIBITED - ROTI KANAI @
