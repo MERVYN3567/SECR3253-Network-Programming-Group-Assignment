@@ -1,0 +1,27 @@
+---
+- name: DANIAL - CONFIGURE CSR1000V PART 2
+  hosts: CSR1kv
+  gather_facts: false
+  connection: network_cli
+  
+  tasks:
+    - name: CONFIGURE INTERFACE DESCRIPTION
+      ios_config:
+        parents: "interface GigabitEthernet1"
+        lines:
+          - description Roti Kanai Management Interface
+
+    - name: CONFIGURE STATIC ROUTE
+      ios_config:
+        lines:
+          - ip route 0.0.0.0 0.0.0.0 192.168.56.1
+
+    - name: RETRIEVE DEVICE INFORMATION
+      ios_command:
+        commands:
+          - show version
+      register: device_info
+
+    - name: DISPLAY DEVICE INFORMATION
+      debug:
+        msg: "{{ device_info.stdout[0] }}"
