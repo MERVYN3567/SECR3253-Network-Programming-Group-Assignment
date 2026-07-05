@@ -20,17 +20,4 @@
           - "Logged-in Users:"
           - "{{ logged_in_users.stdout_lines }}"
           - "Top 5 Processes by CPU Usage:"
-          - "{{ top_processes.stdout_lines }}"---
-- name: TEE - LINUX TELEMETRY PART 2
-  hosts: localhost
-  connection: local
-  gather_facts: true
-  
-  tasks:
-    - name: GET LOGGED-IN USERS
-      command: who
-      register: logged_in_users
-
-    - name: GET TOP 5 RUNNING PROCESSES BY CPU
-      shell: ps -eo pid,ppid,cmd,%cpu --sort=-%cpu | head -n 6
-      register: top_processes
+          - "{{ top_processes.stdout_lines }}"
