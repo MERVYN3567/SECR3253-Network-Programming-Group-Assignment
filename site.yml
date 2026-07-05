@@ -1,0 +1,7 @@
+---
+# MASTER PLAYBOOK - ROTI KANAI AUTOMATION SOLUTION
+
+- import_playbook: avidian_router_part1.yml
+- import_playbook: mior_router_part2.yml
+- import_playbook: mervyn_linux_part1.yml
+- import_playbook: tee_linux_part2.yml
