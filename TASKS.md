@@ -95,5 +95,4 @@ SECR3253-Network-Programming-Group-Assignment/
 | Router Configuration Part 2 | Mior | ✅ Completed |
 | Linux Telemetry Part 1 | Mervyn | ✅ Completed |
 | Linux Telemetry Part 2 | Tee | ✅ Completed |
-| Project Integration (`site.yml`) | Tee | ✅ Completed |
-| Documentation | Mervyn | ✅ Completed |
+| Reflection | All | ✅ Completed |
