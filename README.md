@@ -17,6 +17,9 @@ Before executing any automation playbooks, ensure that your execution machine ha
 * Docker Engine installed and running.
 * Access path routes open to target standard execution environments and target node network routers.
 
+> **⚠️ IMPORTANT: Environment Portability (IP Addressing)**
+> This project is configured by default to target a CSR1000v router at `192.168.56.101`. Before executing the Docker build steps below, you **must** open the `hosts` file in the root directory and modify the `ansible_host` IP address to match the specific IP address of the CSR1000v router on your local network.
+
 *(Note: Local installation of Ansible is not required, the Dockerfile include all things needed to ensure compatibility with legacy routing cryptography.)*
 
 The core workspace environment configurations (`ansible.cfg` and `hosts` inventory metadata) must remain located at the root directory layer of your workspace clone path.
