@@ -15,15 +15,28 @@ The automation architecture consists of three core components:
 
 Before executing any automation playbooks, ensure that your execution machine has local configurations aligned. Your system environment must include:
 * Docker Engine installed and running.
-* Ansible core package dependencies configured locally.
 * Access path routes open to target standard execution environments and target node network routers.
+
+*(Note: Local installation of Ansible is not required, the Dockerfile include all things needed to ensure compatibility with legacy routing cryptography.)*
 
 The core workspace environment configurations (`ansible.cfg` and `hosts` inventory metadata) must remain located at the root directory layer of your workspace clone path.
 
 ---
 
 ## Operational Execution Instructions
-To execute the complete operational sequence across all assigned functional layers at once (including router configurations and full telemetry diagnostics), run the integrated orchestration master playbook:
+To deploy the infrastructure and execute the complete operational sequence across all assigned functional layers at once (including router configurations and full telemetry diagnostics), execute the following commands in your terminal:
 
+**1. Build the automation environment:**
 ```bash
-ansible-playbook site.yml
+docker build -t rotikanai-automation .
+```
+
+**2. Start the isolated container in the background:**
+```bash
+docker run -d --name ansible-node rotikanai-automation
+```
+
+**3. Execute the master playbook:**
+```bash
+docker exec -it ansible-node ansible-playbook site.yml
+```
