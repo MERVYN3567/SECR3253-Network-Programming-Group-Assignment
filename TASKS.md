@@ -83,6 +83,17 @@ SECR3253-Network-Programming-Group-Assignment/
 ├── mervyn_linux_part1.yml
 ├── tee_linux_part2.yml
 ├── site.yml
-│
-└── reflection/
 ```
+
+# Project Progress
+
+| Task | Assigned To | Status |
+|------|-------------|--------|
+| Docker Setup | Aziidan | ✅ Completed |
+| Inventory Configuration | Aziidan | ✅ Completed |
+| Router Configuration Part 1 | Avidian | ✅ Completed |
+| Router Configuration Part 2 | Mior | ✅ Completed |
+| Linux Telemetry Part 1 | Mervyn | ✅ Completed |
+| Linux Telemetry Part 2 | Tee | ✅ Completed |
+| Project Integration (`site.yml`) | Tee | ✅ Completed |
+| Documentation | Mervyn | ✅ Completed |
