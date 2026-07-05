@@ -1,6 +1,6 @@
 # Team: Roti Kanai
-# Base image Python like in Lab 5
-FROM python
+# Base image Python 3.8 to support legacy Cisco SSH like in Lab 5
+FROM python:3.8-bullseye
 
 # Project Metadata
 LABEL maintainer="Aziidan Ng- Team Roti Kanai"
@@ -11,7 +11,7 @@ LABEL project="SECR3253 Network Programming Group Assignment"
 RUN apt-get update && apt-get install -y \
     sshpass \
     openssh-client \
-    && pip install --no-cache-dir ansible \
+    && pip install --no-cache-dir ansible paramiko \
     && rm -rf /var/lib/apt/lists/*
 
 # Directory for automation scripts

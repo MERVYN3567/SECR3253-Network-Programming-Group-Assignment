@@ -15,10 +15,10 @@
 
     - name: DISPLAY LINUX TELEMETRY PART 1
       debug:
-      msg:
-        - "Hostname: {{ ansible_hostname }}"
-        - "Current Date/Time: {{ date_info.stdout }}"
-        - "Memory Total (MB): {{ ansible_memtotal_mb }}"
-        - "Memory Free (MB): {{ ansible_memfree_mb }}"
-        - "CPU Info Snippet:"
-        - "{{ cpu_info.stdout_lines[0:7] }}"
+        msg:
+          - "Hostname: {{ ansible_hostname }}"
+          - "Current Date/Time: {{ date_info.stdout }}"
+          - "Memory Total (MB): {{ ansible_memtotal_mb }}"
+          - "Memory Free (MB): {{ ansible_memfree_mb }}"
+          - "CPU Info Snippet:"
+          - "{{ cpu_info.stdout_lines[0:7] }}"
